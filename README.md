@@ -57,4 +57,4 @@
 | Arya Nalavade  | Content Cell  |
 
 ## GitHub Repository
-https://github.gatech.edu/ashah726/ashah726.github.io [https://github.gatech.edu/ashah726/ashah726.github.io]
+https://github.gatech.edu/ashah726/ashah726.github.io
