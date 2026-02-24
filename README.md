@@ -1,5 +1,3 @@
-# CS 7641 (ML) Project
-
 ## Proposal
 
 ### Introduction / Background
