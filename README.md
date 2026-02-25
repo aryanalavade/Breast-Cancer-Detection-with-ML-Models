@@ -56,3 +56,6 @@
 
 ## GitHub Repository
 https://github.gatech.edu/ashah726/ashah726.github.io
+
+## Slidedeck
+https://docs.google.com/presentation/d/1FLcbaeM0SAPhENrqE2YTM4Voni2K-sQHjwmWEPyKncg/edit?usp=sharing
