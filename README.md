@@ -43,7 +43,7 @@
 
 
 ## Gantt Chart
-
+https://docs.google.com/spreadsheets/d/1q1Ha7X4cs_rv75ANg4HArgvxn4CUn1_MCZZd7z7sMLw/edit?usp=sharing
 
 ## Contribution Table
 | Name  | Proposal Contributions |
@@ -58,4 +58,4 @@
 https://github.gatech.edu/ashah726/ashah726.github.io
 
 ## Slidedeck
-https://docs.google.com/presentation/d/1FLcbaeM0SAPhENrqE2YTM4Voni2K-sQHjwmWEPyKncg/edit?usp=sharing
+Edit: https://docs.google.com/presentation/d/1FLcbaeM0SAPhENrqE2YTM4Voni2K-sQHjwmWEPyKncg/edit?usp=sharing
