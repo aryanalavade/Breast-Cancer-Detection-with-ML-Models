@@ -59,3 +59,6 @@ https://github.gatech.edu/ashah726/ashah726.github.io
 
 ## Slidedeck
 https://docs.google.com/presentation/d/1FLcbaeM0SAPhENrqE2YTM4Voni2K-sQHjwmWEPyKncg/edit?usp=sharing
+
+## Proposal Draft Document
+https://docs.google.com/document/d/1hO6IhdO9scGuWqY_3P0qxXo7ijVnvJT0wbaslSVciW4/edit?usp=sharing
