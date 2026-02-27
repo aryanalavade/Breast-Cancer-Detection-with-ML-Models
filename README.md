@@ -59,7 +59,7 @@ https://docs.google.com/spreadsheets/d/1q1Ha7X4cs_rv75ANg4HArgvxn4CUn1_MCZZd7z7s
 | Name  | Proposal Contributions |
 | --- | --- |
 | Aesha Shah  | GitHub repo creation, Gantt chart, Slides  |
-| Shreema Vijayakumar  | Proposal (Introduction, Problem)  |
+| Shreema Vijayakumar  | Proposal: (Introduction, Problem)  |
 | Suhaani Gupta  | Content Cell  |
 | Galadriel Cho  | Content Cell  |
 | Arya Nalavade  | Content Cell  |
