@@ -60,10 +60,10 @@ Supervised Learning Evaluation (SVM and XGBoost)
 &emsp; Balanced accuracy accounts for class imbalance by averaging recall across classes. This prevents inflated performance estimates from majority-class dominance.
 
 6. Confusion Matrix
-&emsp; - True Positives (TP)
-&emsp; - False Positives (FP)
-&emsp; - True Negatives (TN)
-&emsp; - False Negatives (FN)
+- True Positives (TP)
+- False Positives (FP)
+- True Negatives (TN)
+- False Negatives (FN)
 
 &emsp; Specifically for minimizing false negatives.
 
@@ -83,9 +83,9 @@ Unsupervised Learning Evaluation (K-Means)
 &emsp; Measures internal cluster cohesion and separation without using ground truth labels.
 
 5. Model Generalization
-&emsp; - Cross-validation mean score
-&emsp; - Cross-validation standard deviation
-&emsp; - Training vs. validation performance gap
+- Cross-validation mean score
+- Cross-validation standard deviation
+- Training vs. validation performance gap
 
 #### Project Goals
 
