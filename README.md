@@ -108,11 +108,11 @@ https://docs.google.com/spreadsheets/d/1q1Ha7X4cs_rv75ANg4HArgvxn4CUn1_MCZZd7z7s
 ## Contribution Table
 | Name  | Proposal Contributions |
 | --- | --- |
-| Aesha Shah  | Content Cell  |
-| Shreema Vijayakumar  | Content Cell  |
-| Suhaani Gupta  | Content Cell  |
-| Galadriel Cho  | Content Cell  |
-| Arya Nalavade  | Content Cell  |
+| Aesha Shah  | GitHub repo creation & updates, Proposal (Metrics), Slides (Metrics), Gantt Chart |
+| Shreema Vijayakumar  | GitHub repo updates, Proposal (Intro, Problem), Slides (Intro, Problem) |
+| Suhaani Gupta  | Proposal (Supervised & Unsupervised Methods), Slides (Supervised & Unsupervised Methods)  |
+| Galadriel Cho  | Proposal (Data Preprocessing & Algorithms/Models), Slides (Data Preprocessing & Algorithms/Models) |
+| Arya Nalavade  | Proposal (Goals & Expected Results), Slides (Goals & Expected Results) |
 
 ## GitHub Repository
 https://github.gatech.edu/ashah726/ashah726.github.io
