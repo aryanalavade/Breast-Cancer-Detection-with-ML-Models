@@ -35,10 +35,6 @@ XGBoost is a supervised prediction algorithm that sequentially learns through gr
 SVM is a supervised algorithm that classifies by maximizing the margin between classes. Particularly powerful for binary classification, it will be applied to predict between benign and malignant tumors. We will experiment with both linear and RBF kernels using sklearn.svm.SVC. Hyperparameters such as C and gamma will be tuned using grid search with cross-validation.
 
 
-### Supervised Learning Methods
-
-### Unsupervised Learning Methods
-
 ## Potential Results and Discussion
 
 ### Quantitative Metrics
