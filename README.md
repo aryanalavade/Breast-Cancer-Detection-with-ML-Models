@@ -19,11 +19,11 @@ We aim to build a system that essentially maximizes recall to make sure no cance
 
 ## Methods
 ### Data Preprocessing
-1. Data Cleaning
+1. Data Cleaning  
 The ID column does not provide predictive value and will be removed. Although the dataset documentation indicates no missing values, we will programmatically verify this and handle any anomalies if detected.
-2. One Hot Encoding
+3. One Hot Encoding  
 The Diagnosis column currently contains either M for a malignant tumor or B for a benign tumor. To facilitate classification, these labels will be encoded as 0 for B and 1 for M.
-3. Dimensionality Reduction
+4. Dimensionality Reduction  
 The dataset contains 30 numerical features, many of which are correlated. We will apply Principal Component Analysis to reduce dimensionality while preserving maximum variance. PCA will help reduce multicollinearity, improve computational efficiency, and potentially improve generalization. We will evaluate model performance both with and without PCA to measure its impact.
 
 ### Algorithms/Models
