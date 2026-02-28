@@ -1,11 +1,9 @@
 # Proposal
 
 ## Introduction / Background
-Breast cancer is a disease characterized by the abnormal, rapid growth of breast cells forming tumors. When individuals are not diagnosed at an early stage, these tumors can metastasize, becoming increasingly lethal. Globally, breast cancer is one of the most prevalent forms of cancers affecting. Within the United States alone, about 1 in 8 women are affected by breast cancer during their lifetime [1]. 
-
-However, early intervention is extremely effective and vital in reducing the effects of this cancer. Computer-aided detection (CAD) acts as a supplemental tool for radiologists in identifying abnormalities. CAD utilizes ML and image processing to analyze scans, providing a second opinion that identifies abnormalities missed by manual review.
+Breast cancer, affecting 1 in 8 women in the Unites States, is lethal if diagnosed late due to metastasis [1]. Early intervention is extremely effective and vital in reducing the effects of this cancer. Computer-aided detection (CAD) acts as a supplemental tool for radiologists in identifying abnormalities. CAD utilizes ML and image processing to analyze scans, providing a second opinion that identifies abnormalities missed by manual review.
 #### Literature Review
-Traditional diagnosis often relies on fine needle aspiration (FNA) biopsies [2]. However, human interpretation can often be subject to variability based on countless factors. Quantitative nuclear features extracted from FNA scans improve the efficiency of distinguishing between benign and malignant masses [3]. With more recent advances in Deep Learning and ML algorithms like Support Vector Machines (SVM), machine learning based disease diagnosis (MLBDD) shows accuracies above 90% [4], [5].
+Traditional FNA biopsy interpretation suffers from human variability [2]. Using quantitative nuclear features from FNA scans improves diagnostic efficiency, with ML algorithms like SVM achieving over 90% accuracy in disease diagnosis [3], [4], [5].
 #### Dataset Description
 For our project, we will be using the Diagnostic Wisconsin Breast Cancer Database from the UCI Machine Learning Repository. There are 32 features including radius, texture, perimeter, areas, smoothness, compactness, concavity, concave points, symmetry, and fractal dimension. They describe characteristics of the cell nuclei in the digital image. The binary target variable indicates if the tumour is benign (B) or malignant (M). It is made up of 569 samples, 357 of which are benign and 212 are malignant. 
 #### Dataset Source
