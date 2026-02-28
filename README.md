@@ -3,7 +3,7 @@
 ## Introduction / Background
 Breast cancer, affecting 1 in 8 women in the United States, is lethal if diagnosed late due to metastasis [1]. Early intervention is vital. Computer-aided detection (CAD) utilizes ML and image processing to provide a second opinion, identifying abnormalities missed by manual review.
 #### Literature Review
-Traditional FNA biopsy interpretation suffers from human variability [2]. Using quantitative nuclear features from FNA scans improves diagnostic efficiency, with ML algorithms like SVM achieving over 90% accuracy in disease diagnosis [3], [4], [5].
+Traditional diagnosis via fine needle aspiration (FNA) biopsies [2] can often be subject to human variability. Quantitative nuclear features extracted from digital FNA scans enable more efficient differentiation between benign and malignant masses [3]. With more recent advances in Deep Learning and ML algorithms like Support Vector Machines (SVM), machine learning based disease diagnosis (MLBDD) shows accuracies above 90% [4], [5]. 
 #### Dataset Description
 This project uses the Diagnostic Wisconsin Breast Cancer dataset from the UCI Machine Learning Repository. The dataset contains 569 samples (357 benign and 212 malignant) with 30 numerical features describing cell nucleus characteristics such as radius, texture, concavity, and fractal dimension. The binary target variable indicates whether a tumor is benign or malignant.  
 #### Dataset Source
