@@ -3,9 +3,9 @@
 ## Introduction / Background
 Breast cancer is a disease characterized by the abnormal, rapid growth of breast cells forming tumors. When individuals are not diagnosed at an early stage, these tumors can metastasize, becoming increasingly lethal. Globally, breast cancer is one of the most prevalent forms of cancers affecting. Within the United States alone, about 1 in 8 women are affected by breast cancer during their lifetime [1]. 
 
-However, early intervention is extremely effective and vital in reducing the effects of this cancer. Computer-aided detection (CAD) acts as a supplemental tool for radiologists in identifying abnormalities. CAD leverages technologies such as Machine Learning, Artificial Intelligence, and Image Processing to analyze ultrasounds, mammograms, and MRIs to detect early-stage cancers, either validating a professional’s diagnosis or even pointing out abnormalities that they may have overlooked.
+However, early intervention is extremely effective and vital in reducing the effects of this cancer. Computer-aided detection (CAD) acts as a supplemental tool for radiologists in identifying abnormalities. CAD utilizes ML and image processing to analyze scans, providing a second opinion that identifies abnormalities missed by manual review.
 #### Literature Review
-Traditional diagnosis often relies on fine needle aspiration (FNA) biopsies [2]. However, human interpretation can often be subject to variability based on countless factors. Research has shown that computer derived nuclear features, quantitative measurements extracted from digital pathology scans like FNA, can help more efficiently distinguish between benign and malignant masses [3]. With more recent advances in Deep Learning and ML algorithms like Support Vector Machines (SVM), machine learning based disease diagnosis (MLBDD) shows accuracies above 90% [4], [5].
+Traditional diagnosis often relies on fine needle aspiration (FNA) biopsies [2]. However, human interpretation can often be subject to variability based on countless factors. Quantitative nuclear features extracted from FNA scans improve the efficiency of distinguishing between benign and malignant masses [3]. With more recent advances in Deep Learning and ML algorithms like Support Vector Machines (SVM), machine learning based disease diagnosis (MLBDD) shows accuracies above 90% [4], [5].
 #### Dataset Description
 For our project, we will be using the Diagnostic Wisconsin Breast Cancer Database from the UCI Machine Learning Repository. There are 32 features including radius, texture, perimeter, areas, smoothness, compactness, concavity, concave points, symmetry, and fractal dimension. They describe characteristics of the cell nuclei in the digital image. The binary target variable indicates if the tumour is benign (B) or malignant (M). It is made up of 569 samples, 357 of which are benign and 212 are malignant. 
 #### Dataset Source
@@ -13,14 +13,14 @@ Link: https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic
 
 ## Problem Definition
 ### Problem
-The primary challenge in breast cancer diagnosis is the consequences of misclassification. A False Positive can result in unnecessary invasive procedures and a False Negative can delay or prevent necessary treatment. The lack of transparency in many CAD systems makes it difficult for professionals to trust the automated outputs and black-boxed predictions.
+Diagnostic misclassification is critical. False negatives can delay critical treatment, while false positives cause unnecessary invasive procedures. The lack of transparency in many CAD systems makes it difficult for professionals to trust the automated outputs and black-boxed predictions.
 #### Motivation
-We aim to build a system that essentially maximizes recall to make sure no cancer presence is left undetected while sustaining high accuracy by applying robust ML algorithms. We also would like to look for deeper insights by incorporating unsupervised learning, potentially finding different clusters of masses that might represent information such as different stages of the progression of cancer. This would provide more insight beyond the binary label of malignant or benign.
+We aim to build a system that essentially maximizes recall to make sure no cancer presence is left undetected while sustaining high accuracy by applying robust ML algorithms. We also would like to look for deeper insights by incorporating unsupervised learning, potentially finding different clusters of masses that might represent information such as different stages of the progression of cancer.
 
 ## Methods
 ### Data Preprocessing
 1. Data Cleaning  
-The ID column does not provide predictive value and will be removed. Although the dataset documentation indicates no missing values, we will programmatically verify this and handle any anomalies if detected.
+We will drop the non-predictive ID column and programmatically verify the reported lack of missing values.
 3. One Hot Encoding  
 The Diagnosis column currently contains either M for a malignant tumor or B for a benign tumor. To facilitate classification, these labels will be encoded as 0 for B and 1 for M.
 4. Dimensionality Reduction  
