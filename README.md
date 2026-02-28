@@ -13,14 +13,14 @@ Link: https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic
 ### Problem
 Diagnostic misclassification is critical. False negatives can delay critical treatment, while false positives cause unnecessary invasive procedures. The lack of transparency in many CAD systems makes it difficult for professionals to trust the automated outputs and black-boxed predictions.
 #### Motivation
-We aim to build a system that essentially maximizes recall to make sure no cancer presence is left undetected while sustaining high accuracy by applying robust ML algorithms. We also would like to look for deeper insights by incorporating unsupervised learning, potentially finding different clusters of masses that might represent information such as different stages of the progression of cancer.
+We aim to maximize recall to ensure no malignancy goes undetected while maintaining high accuracy. Additionally, unsupervised learning will be used to identify latent clusters that may represent different stages of cancer progression.
 
 ## Methods
 ### Data Preprocessing
 1. Data Cleaning  
 We will drop the non-predictive ID column and programmatically verify the reported lack of missing values.
 3. One Hot Encoding  
-The Diagnosis column currently contains either M for a malignant tumor or B for a benign tumor. To facilitate classification, these labels will be encoded as 0 for B and 1 for M.
+The Diagnosis column labels (M/B) will be binary encoded as 0 for Benign and 1 for Malignant to facilitate classification.
 4. Dimensionality Reduction  
 We will apply Principal Component Analysis to reduce dimensionality of 30 numerical features while preserving maximum variance. PCA will help reduce multicollinearity, improve computational efficiency, and potentially improve generalization.
 
