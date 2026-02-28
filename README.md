@@ -1,11 +1,11 @@
 # Proposal
 
 ## Introduction / Background
-Breast cancer, affecting 1 in 8 women in the Unites States, is lethal if diagnosed late due to metastasis [1]. Early intervention is extremely effective and vital in reducing the effects of this cancer. Computer-aided detection (CAD) acts as a supplemental tool for radiologists in identifying abnormalities. CAD utilizes ML and image processing to analyze scans, providing a second opinion that identifies abnormalities missed by manual review.
+Breast cancer, affecting 1 in 8 women in the United States, is lethal if diagnosed late due to metastasis [1]. Early intervention is vital. Computer-aided detection (CAD) utilizes ML and image processing to provide a second opinion, identifying abnormalities missed by manual review.
 #### Literature Review
 Traditional FNA biopsy interpretation suffers from human variability [2]. Using quantitative nuclear features from FNA scans improves diagnostic efficiency, with ML algorithms like SVM achieving over 90% accuracy in disease diagnosis [3], [4], [5].
 #### Dataset Description
-This project uses the Diagnostic Wisconsin Breast Cancer dataset from the UCI Machine Learning Repository. The dataset contains 569 samples (357 benign and 212 malignant) with 30 numerical features describing cell nucleus characteristics such as radius, texture, perimeter, area, smoothness, compactness, concavity, concave points, symmetry, and fractal dimension. The binary target variable indicates whether a tumor is benign or malignant.  
+This project uses the Diagnostic Wisconsin Breast Cancer dataset from the UCI Machine Learning Repository. The dataset contains 569 samples (357 benign and 212 malignant) with 30 numerical features describing cell nucleus characteristics such as radius, texture, concavity, and fractal dimension. The binary target variable indicates whether a tumor is benign or malignant.  
 #### Dataset Source
 Link: https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic
 
