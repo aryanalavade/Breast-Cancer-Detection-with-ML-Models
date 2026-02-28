@@ -88,16 +88,16 @@ https://docs.google.com/spreadsheets/d/1q1Ha7X4cs_rv75ANg4HArgvxn4CUn1_MCZZd7z7s
 | Name  | Proposal Contributions |
 | --- | --- |
 | Aesha Shah  | GitHub repo creation & updates, Proposal (Metrics), Slides (Metrics), Video, Gantt Chart |
-| Shreema Vijayakumar  | GitHub repo updates, Proposal (Intro, Problem), Slides & Video (Intro, Problem) |
+| Shreema Vijayakumar  | GitHub repo updates, Proposal (Intro, Dataset Analysis, Problem), Slides & Video (Intro, Dataset Analysis, Problem) |
 | Suhaani Gupta  | GitHub repo updates, Proposal (Supervised & Unsupervised Methods), Slides & Video (Supervised & Unsupervised Methods)  |
 | Galadriel Cho  | Proposal (Data Preprocessing & Algorithms/Models), Slides & Video (Data Preprocessing & Algorithms/Models) |
 | Arya Nalavade  | Proposal (Goals & Expected Results), Slides & Video (Goals & Expected Results) |
+
+# Video Presentation
+*need to add link
 
 # GitHub Repository
 https://github.gatech.edu/ashah726/ashah726.github.io
 
 # Slidedeck
 https://docs.google.com/presentation/d/1FLcbaeM0SAPhENrqE2YTM4Voni2K-sQHjwmWEPyKncg/edit?usp=sharing
-
-# Proposal Draft Document
-https://docs.google.com/document/d/1hO6IhdO9scGuWqY_3P0qxXo7ijVnvJT0wbaslSVciW4/edit?usp=sharing
