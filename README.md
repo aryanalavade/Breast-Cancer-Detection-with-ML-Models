@@ -94,7 +94,7 @@ https://docs.google.com/spreadsheets/d/1q1Ha7X4cs_rv75ANg4HArgvxn4CUn1_MCZZd7z7s
 | Arya Nalavade  | Proposal (Goals & Expected Results), Slides & Video (Goals & Expected Results) |
 
 # Video Presentation
-*need to add link
+https://youtu.be/732VsacyU7g
 
 # GitHub Repository
 https://github.gatech.edu/ashah726/ashah726.github.io
