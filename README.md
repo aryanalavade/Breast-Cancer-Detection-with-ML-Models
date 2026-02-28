@@ -44,15 +44,15 @@ We plan to use standard metrics defined in the scikit-learn metrics documentatio
 
 1. Confusion Matrix: True Positives (TP), False Positives (FP), True Negatives (TN), False Negatives (FN)
 
-2. Recall (Malignant Class): proportion of actual malignant tumors correctly identified: Recall = TP / (TP + FN). This is our primary metric because false negatives (malignant predicted as benign) are the most critical error.
+2. Recall (Malignant Class): proportion of actual malignant tumors correctly identified: Recall = TP / (TP + FN)
 
-2. Precision (Malignant Class): proportion of predicted malignant tumors that are truly malignant: Precision = TP / (TP + FP).
+3. Precision (Malignant Class): proportion of predicted malignant tumors that are truly malignant: Precision = TP / (TP + FP).
 
-3. F1-Score: harmonic mean of precision and recall: F1 = 2 * (Precision * Recall) / (Precision + Recall)
+4. F1-Score: harmonic mean of precision and recall: F1 = 2 * (Precision * Recall) / (Precision + Recall)
 
-4. Receiver Operating Characteristic Area Under the Curve (ROC-AUC) for comparing SVM and XGBoost.
+5. Receiver Operating Characteristic Area Under the Curve (ROC-AUC) for comparing SVM and XGBoost.
 
-5. Balanced Accuracy: accounts for class imbalance by averaging recall across classes, preventing inflated performance estimates from majority-class dominance.
+6. Balanced Accuracy: accounts for class imbalance by averaging recall across classes, preventing inflated performance estimates from majority-class dominance.
 
 #### Unsupervised Learning Evaluation (K-Means)
 
@@ -60,11 +60,9 @@ We plan to use standard metrics defined in the scikit-learn metrics documentatio
 
 2. Normalized Mutual Information (NMI): measures how much diagnostic information (benign vs. malignant) is captured by the clusters.
 
-3. Silhouette Score: evaluates cluster separation and cohesion to determine whether tumors form distinct groups in feature space without using labels.
+3. Silhouette Score: evaluates cluster separation and cohesion to determine whether tumors form distinct groups in feature space without labels.
 
 4. Model Generalization: cross-validation mean, standard deviation, and training–validation gap are reported to ensure clustering stability and avoid overfitting.
-
-These measures ensure that clustering structure is stable across data splits and not driven by random variation.
 
 ### Project Goals
 The goal of this project is to develop and evaluate a binary classification model for breast tumor diagnosis using morphological features from the Breast Cancer Wisconsin Diagnostic dataset. We will compare supervised learning algorithms, including XGBoost and SVM, and explore whether unsupervised clustering (K-means) reveals natural groupings aligned with malignancy. We will also assess the effect of dimensionality reduction using PCA on classification accuracy and generalization.
