@@ -65,15 +65,19 @@ We plan to use standard metrics defined in the scikit-learn metrics documentatio
 4. Model Generalization: cross-validation mean, standard deviation, and training–validation gap are reported to ensure clustering stability and avoid overfitting.
 
 ### Project Goals
-The goal of this project is to develop and evaluate a binary classification model for breast tumor diagnosis using morphological features from the Breast Cancer Wisconsin Diagnostic dataset. We will compare supervised learning algorithms, including XGBoost and SVM, and explore whether unsupervised clustering (K-means) reveals natural groupings aligned with malignancy. We will also assess the effect of dimensionality reduction using PCA on classification accuracy and generalization.
+We aim to develop a binary classification model for breast tumors using morphological features. Our objectives are to:
 
-Given the high stakes of cancer diagnosis, we will prioritize minimizing false negatives while maintaining strong overall accuracy. By using low-cost nuclear morphology features instead of expensive genomic or imaging data, we aim to evaluate whether scalable, resource-efficient inputs can still achieve strong predictive performance. To address overfitting risks in this relatively small dataset, we will use stratified cross-validation with hyperparameter tuning inside validation folds. We will also analyze feature importance to improve transparency and emphasize that this model is a decision-support research prototype, not a clinical diagnostic tool.
+1. Compare Supervised Models: Evaluate the predictive performance of XGBoost and SVM.
+
+2. Explore Latent Patterns: Use K-means clustering to identify natural groupings in the feature space.
+
+3. Optimize Pipeline: Test the impact of PCA on classification accuracy and computational efficiency.
+
+We’re prioritizing clinical sustainability by focusing on high recall and low-cost nuclear morphology features instead of expensive genomic pipelines. To keep things ethically sound, we’ll use stratified cross-validation and feature importance analysis to increase model transparency, framing it as a research-based decision support tool rather than a final diagnostic authority.
 
 
 ### Expected Results
-We expect strong classification performance in distinguishing malignant from benign tumors. Prior work on this dataset has achieved testing accuracy near 98.7% using SVM with an RBF kernel, along with high precision and recall across evaluation splits [6]. Based on these results, we anticipate that well-tuned SVM and XGBoost models will achieve high accuracy, strong ROC-AUC, and balanced sensitivity and specificity, particularly when thresholds are adjusted to prioritize recall in clinical contexts.
-
-We also expect feature importance analyses to highlight morphology-related variables, such as texture and area, as key predictors, supporting both model interpretability and clinically meaningful insights.
+We anticipate strong classification performance, as prior studies using SVM with RBF kernels on this dataset have reached accuracies near 98.7% [6]. We expect well-tuned models to yield high ROC-AUC and balanced sensitivity. Furthermore, we expect feature importance analysis to identify morphology variables such as texture and areas as the most significant predictors of malignant, providing interpretable insights for clinical support.
 
 ## References
 [1] L. Shockney, “Breast Cancer Facts & Statistics,” National Breast Cancer Foundation, Jun. 15, 2023. https://www.nationalbreastcancer.org/breast-cancer-facts/
