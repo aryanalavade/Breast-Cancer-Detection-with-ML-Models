@@ -32,60 +32,36 @@ We aim to build a system that essentially maximizes recall to make sure no cance
 
 ### Unsupervised Learning Methods
 
-## Results and Discussion
+## Potential Results and Discussion
 
 ### Quantitative Metrics
 We plan to use standard metrics defined in the scikit-learn metrics documentation. Because this is a binary classification project (Benign vs. Malignant), and false negatives are clinically important, our evaluation prioritizes recall for the malignant class.
 
 #### Supervised Learning Evaluation (SVM and XGBoost)
 
-1. Recall (Malignant Class)
+1. Confusion Matrix: True Positives (TP), False Positives (FP), True Negatives (TN), False Negatives (FN)
 
-&emsp; Recall measures the proportion of actual malignant tumors correctly identified: Recall = TP / (TP + FN). This is our primary metric because false negatives (malignant predicted as benign) are the most critical error.
+2. Recall (Malignant Class): proportion of actual malignant tumors correctly identified: Recall = TP / (TP + FN). This is our primary metric because false negatives (malignant predicted as benign) are the most critical error.
 
-2. Precision (Malignant Class)
+2. Precision (Malignant Class): proportion of predicted malignant tumors that are truly malignant: Precision = TP / (TP + FP).
 
-&emsp; Precision measures the proportion of predicted malignant tumors that are truly malignant: Precision = TP / (TP + FP).
+3. F1-Score: harmonic mean of precision and recall: F1 = 2 * (Precision * Recall) / (Precision + Recall)
 
-3. F1-Score
+4. Receiver Operating Characteristic Area Under the Curve (ROC-AUC) for comparing SVM and XGBoost.
 
-&emsp; The F1-score is the harmonic mean of precision and recall: F1 = 2 * (Precision * Recall) / (Precision + Recall)
-
-4. ROC-AUC
-
-&emsp; The Receiver Operating Characteristic Area Under the Curve (ROC-AUC) for comparing SVM and XGBoost.
-
-5. Balanced Accuracy
-
-&emsp; Balanced accuracy accounts for class imbalance by averaging recall across classes. This prevents inflated performance estimates from majority-class dominance.
-
-6. Confusion Matrix
-- True Positives (TP)
-- False Positives (FP)
-- True Negatives (TN)
-- False Negatives (FN)
-
-&emsp; Specifically for minimizing false negatives.
-
+5. Balanced Accuracy: accounts for class imbalance by averaging recall across classes, preventing inflated performance estimates from majority-class dominance.
 
 #### Unsupervised Learning Evaluation (K-Means)
 
-1. Adjusted Rand Index (ARI)
+1. Adjusted Rand Index (ARI): measures how well clusters align with true benign and malignant labels, adjusted for chance.
 
-&emsp; Measures similarity between clustering assignments and ground truth labels, adjusted for chance.
+2. Normalized Mutual Information (NMI): measures how much diagnostic information (benign vs. malignant) is captured by the clusters.
 
-2. Normalized Mutual Information (NMI)
+3. Silhouette Score: evaluates cluster separation and cohesion to determine whether tumors form distinct groups in feature space without using labels.
 
-&emsp; Measures shared information between cluster assignments and true labels.
+4. Model Generalization: cross-validation mean, standard deviation, and training–validation gap are reported to ensure clustering stability and avoid overfitting.
 
-4. Silhouette Score
-
-&emsp; Measures internal cluster cohesion and separation without using ground truth labels.
-
-5. Model Generalization
-- Cross-validation mean score
-- Cross-validation standard deviation
-- Training vs. validation performance gap
+These measures ensure that clustering structure is stable across data splits and not driven by random variation.
 
 ### Project Goals
 
