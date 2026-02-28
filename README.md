@@ -27,9 +27,9 @@ The Diagnosis column currently contains either M for a malignant tumor or B for 
 The dataset contains 30 numerical features, many of which are correlated. We will apply Principal Component Analysis to reduce dimensionality while preserving maximum variance. PCA will help reduce multicollinearity, improve computational efficiency, and potentially improve generalization. We will evaluate model performance both with and without PCA to measure its impact.
 
 ### Algorithms/Models
-1. K-MEANS
+1. K-MEANS  
 K-Means is an unsupervised algorithm that applies hard clustering to separate our data into groupings based on tumor feature similarities. The intent is to roughly align data within clusters with benign and malignant labels. We will evaluate clustering quality using silhouette scores and compare cluster assignments against true labels.
-2. XGBoost
+2. XGBoost  
 XGBoost is a supervised prediction algorithm that sequentially learns through gradient boosted decision trees.  XGBoost is not sensitive to linear dependence between features, a beneficial trait given that we begin with 30. We will use the xgboost.XGBClassifier implementation and tune learning rate, max depth, and number of estimators.
 3. SVM  
 SVM is a supervised algorithm that classifies by maximizing the margin between classes. Particularly powerful for binary classification, it will be applied to predict between benign and malignant tumors. We will experiment with both linear and RBF kernels using sklearn.svm.SVC. Hyperparameters such as C and gamma will be tuned using grid search with cross-validation.
