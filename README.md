@@ -5,7 +5,7 @@ Breast cancer, affecting 1 in 8 women in the Unites States, is lethal if diagnos
 #### Literature Review
 Traditional FNA biopsy interpretation suffers from human variability [2]. Using quantitative nuclear features from FNA scans improves diagnostic efficiency, with ML algorithms like SVM achieving over 90% accuracy in disease diagnosis [3], [4], [5].
 #### Dataset Description
-For our project, we will be using the Diagnostic Wisconsin Breast Cancer Database from the UCI Machine Learning Repository. There are 32 features including radius, texture, perimeter, areas, smoothness, compactness, concavity, concave points, symmetry, and fractal dimension. They describe characteristics of the cell nuclei in the digital image. The binary target variable indicates if the tumour is benign (B) or malignant (M). It is made up of 569 samples, 357 of which are benign and 212 are malignant. 
+This project uses the Diagnostic Wisconsin Breast Cancer dataset from the UCI Machine Learning Repository. The dataset contains 569 samples (357 benign and 212 malignant) with 30 numerical features describing cell nucleus characteristics such as radius, texture, perimeter, area, smoothness, compactness, concavity, concave points, symmetry, and fractal dimension. The binary target variable indicates whether a tumor is benign or malignant.  
 #### Dataset Source
 Link: https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic
 
