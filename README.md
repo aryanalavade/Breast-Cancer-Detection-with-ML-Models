@@ -63,16 +63,7 @@ We plan to use standard metrics defined in the scikit-learn metrics documentatio
 4. Model Generalization: cross-validation mean, standard deviation, and training–validation gap are reported to ensure clustering stability and avoid overfitting.
 
 ### Project Goals
-We aim to develop a binary classification model for breast tumors using morphological features. Our objectives are to:
-
-1. Compare Supervised Models: Evaluate the predictive performance of XGBoost and SVM.
-
-2. Explore Latent Patterns: Use K-means clustering to identify natural groupings in the feature space.
-
-3. Optimize Pipeline: Test the impact of PCA on classification accuracy and computational efficiency.
-
-We’re prioritizing clinical sustainability by focusing on high recall and low-cost nuclear morphology features instead of expensive genomic pipelines. To keep things ethically sound, we’ll use stratified cross-validation and feature importance analysis to increase model transparency, framing it as a research-based decision support tool rather than a final diagnostic authority.
-
+Our goal is to compare XGBoost and SVM performance while using K-Means to identify latent feature patterns. We prioritize clinical sustainability through high recall and model transparency. We anticipate accuracies near 98.7%, identifying key morphological predictors like texture and area for clinical decision support.
 
 ### Expected Results
 We anticipate strong classification performance, as prior studies using SVM with RBF kernels on this dataset have reached accuracies near 98.7% [6]. We expect well-tuned models to yield high ROC-AUC and balanced sensitivity. Furthermore, we expect feature importance analysis to identify morphology variables such as texture and areas as the most significant predictors of malignant, providing interpretable insights for clinical support.
