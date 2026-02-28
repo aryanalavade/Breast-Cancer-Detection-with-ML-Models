@@ -79,6 +79,8 @@ We anticipate strong classification performance, as prior studies using SVM with
 
 [5] M. Golts, “Support Vector Machines,” AI in Asset Management: Tools, Applications, and Frontiers, pp. 40–51, Nov. 2025, doi: https://doi.org/10.56227/25.1.38.
 
+[6] K. T. Chui, M. D. Lytras, and R. W. Liu, “A Generic Design of Driver Drowsiness and Stress Recognition Using MOGA Optimized Deep MKL-SVM,” Sensors, vol. 20, no. 5, p. 1474, Mar. 2020, doi: https://doi.org/10.3390/s20051474.
+‌
 # Gantt Chart
 https://docs.google.com/spreadsheets/d/1q1Ha7X4cs_rv75ANg4HArgvxn4CUn1_MCZZd7z7sMLw/edit?usp=sharing
 
