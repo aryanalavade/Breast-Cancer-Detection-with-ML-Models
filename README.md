@@ -124,8 +124,9 @@ https://github.gatech.edu/ashah726/ashah726.github.io
 │   └── requirements.txt
 ├── README.md
 └── _config.yaml
+```
 
-
+```
 /kmeans/: Contains files related to the K-Means clustering algorithm.
 /kmeans/breast_cancer_kmeans.ipynb: Jupyter Notebook implementing K-Means on the breast cancer dataset for unsupervised learning and clustering analysis.
 
@@ -137,7 +138,6 @@ https://github.gatech.edu/ashah726/ashah726.github.io
 /README.md: Project documentation (proposal & midterm).
 /_config.yaml: Configuration file used for project settings, environment configuration, and static site generation (GitHub Pages).
 ```
-
 
 # Slidedeck
 https://docs.google.com/presentation/d/1FLcbaeM0SAPhENrqE2YTM4Voni2K-sQHjwmWEPyKncg/edit?usp=sharing
