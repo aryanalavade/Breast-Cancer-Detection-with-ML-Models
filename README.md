@@ -1,4 +1,4 @@
-# Proposal
+# Midterm
 
 ## Introduction / Background
 Breast cancer, affecting 1 in 8 women in the United States, is lethal if diagnosed late due to metastasis [1]. Early intervention is vital. Computer-aided detection (CAD) utilizes ML and image processing to provide a second opinion, identifying abnormalities missed by manual review.
@@ -104,11 +104,8 @@ https://docs.google.com/spreadsheets/d/1q1Ha7X4cs_rv75ANg4HArgvxn4CUn1_MCZZd7z7s
 | Aesha Shah  | GitHub repo creation & updates, Proposal (Metrics), Slides (Metrics), Video, Gantt Chart, SVM code (modifications & results visualizations), Midterm (Next Steps) |
 | Shreema Vijayakumar  | GitHub repo updates, Proposal (Intro, Dataset Analysis, Problem), Slides & Video (Intro, Dataset Analysis, Problem), SVM model code (base code & initial visualizations)|
 | Suhaani Gupta  | GitHub repo updates, Proposal (Supervised & Unsupervised Methods), Slides & Video (Supervised & Unsupervised Methods), K-means code ( ) |
-| Galadriel Cho  | Proposal (Data Preprocessing & Algorithms/Models), Slides & Video (Data Preprocessing & Algorithms/Models, K-means code ( )) |
+| Galadriel Cho  | Proposal (Data Preprocessing & Algorithms/Models), Slides & Video (Data Preprocessing & Algorithms/Models, K-means code ( ) |
 | Arya Nalavade  | Proposal (Goals & Expected Results), Slides & Video (Goals & Expected Results), Midterm (Results & Discussion) |
-
-# Video Presentation
-https://youtu.be/732VsacyU7g
 
 # GitHub Repository
 https://github.gatech.edu/ashah726/ashah726.github.io
@@ -139,5 +136,7 @@ https://github.gatech.edu/ashah726/ashah726.github.io
 /_config.yaml: Configuration file used for project settings, environment configuration, and static site generation (GitHub Pages).
 ```
 
-# Slidedeck
-https://docs.google.com/presentation/d/1FLcbaeM0SAPhENrqE2YTM4Voni2K-sQHjwmWEPyKncg/edit?usp=sharing
+# Proposal Slidedeck & Video 
+- https://docs.google.com/presentation/d/1FLcbaeM0SAPhENrqE2YTM4Voni2K-sQHjwmWEPyKncg/edit?usp=sharing
+- https://youtu.be/732VsacyU7g
+
