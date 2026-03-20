@@ -120,7 +120,7 @@ https://github.gatech.edu/ashah726/ashah726.github.io
 │   └── breast_cancer_kmeans.ipynb
 ├── svm
 │   ├── breast_cancer_svm.ipynb
-│   └── gitignore.txt
+│   ├── gitignore.txt
 │   └── requirements.txt
 ├── README.md
 └── _config.yaml
