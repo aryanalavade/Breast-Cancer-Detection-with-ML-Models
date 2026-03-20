@@ -125,10 +125,10 @@ https://github.gatech.edu/ashah726/ashah726.github.io
 
 ```
 /kmeans/: Contains files related to the K-Means clustering algorithm.
-/kmeans/breast_cancer_kmeans.ipynb: Jupyter Notebook implementing K-Means on the breast cancer dataset for unsupervised learning and clustering analysis.
+/kmeans/breast_cancer_kmeans.ipynb: Jupyter Notebook implementing K-Means on the breast cancer dataset.
 
 /svm/: Contains files r related to the Support Vector Machine (SVM) model.
-/svm/breast_cancer_svm.ipynb: Jupyter Notebook implementing an SVM model for classifying the breast cancer dataset.
+/svm/breast_cancer_svm.ipynb: Jupyter Notebook implementing an SVM model on the breast cancer dataset.
 /svm/gitignore.txt: Specifies files and directories to be ignored by version control.
 /svm/requirements.txt: Lists Python dependencies required to run the notebook code.
 
