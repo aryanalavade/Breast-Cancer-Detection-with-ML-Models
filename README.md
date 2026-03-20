@@ -68,6 +68,20 @@ Our goal is to compare XGBoost and SVM performance while using K-Means to identi
 ### Expected Results
 We anticipate strong classification performance, as prior studies using SVM with RBF kernels on this dataset have reached accuracies near 98.7% [6]. We expect well-tuned models to yield high ROC-AUC and balanced sensitivity. Furthermore, we expect feature importance analysis to identify morphology variables such as texture and areas as the most significant predictors of malignant, providing interpretable insights for clinical support.
 
+## Results & Discussion
+
+### Visualizations
+
+### Quantitative Metrics
+
+### Analysis of Algorithms / Models
+1. K-means --
+   
+3. SVM -- 
+
+### Next Steps
+We plan to refine our current model developments (K-means & SVM) and work on XGBoost implementation. [need to add more i think?]
+
 ## References
 [1] L. Shockney, “Breast Cancer Facts & Statistics,” National Breast Cancer Foundation, Jun. 15, 2023. https://www.nationalbreastcancer.org/breast-cancer-facts/
 
@@ -87,11 +101,11 @@ https://docs.google.com/spreadsheets/d/1q1Ha7X4cs_rv75ANg4HArgvxn4CUn1_MCZZd7z7s
 # Contribution Table
 | Name  | Proposal Contributions |
 | --- | --- |
-| Aesha Shah  | GitHub repo creation & updates, Proposal (Metrics), Slides (Metrics), Video, Gantt Chart |
-| Shreema Vijayakumar  | GitHub repo updates, Proposal (Intro, Dataset Analysis, Problem), Slides & Video (Intro, Dataset Analysis, Problem) |
-| Suhaani Gupta  | GitHub repo updates, Proposal (Supervised & Unsupervised Methods), Slides & Video (Supervised & Unsupervised Methods)  |
-| Galadriel Cho  | Proposal (Data Preprocessing & Algorithms/Models), Slides & Video (Data Preprocessing & Algorithms/Models) |
-| Arya Nalavade  | Proposal (Goals & Expected Results), Slides & Video (Goals & Expected Results) |
+| Aesha Shah  | GitHub repo creation & updates, Proposal (Metrics), Slides (Metrics), Video, Gantt Chart, SVM code (modifications & results visualizations), Midterm (Next Steps) |
+| Shreema Vijayakumar  | GitHub repo updates, Proposal (Intro, Dataset Analysis, Problem), Slides & Video (Intro, Dataset Analysis, Problem), SVM model code (base code & initial visualizations)|
+| Suhaani Gupta  | GitHub repo updates, Proposal (Supervised & Unsupervised Methods), Slides & Video (Supervised & Unsupervised Methods), K-means code ( ) |
+| Galadriel Cho  | Proposal (Data Preprocessing & Algorithms/Models), Slides & Video (Data Preprocessing & Algorithms/Models, K-means code ( )) |
+| Arya Nalavade  | Proposal (Goals & Expected Results), Slides & Video (Goals & Expected Results), Midterm (Results & Discussion) |
 
 # Video Presentation
 https://youtu.be/732VsacyU7g
