@@ -35,59 +35,72 @@ SVM is a supervised algorithm that classifies by maximizing the margin between c
 
 ## Results and Discussion
 
-### Results
+### Visualizations
 ### K-Means Clustering
 
 #### Elbow Method
-The elbow method shows the within-cluster sum of squares (WCSS) for different cluster counts. The “elbow” occurs at 2 clusters, suggesting this as the optimal choice.
-
 ![Elbow Method for K-Means](./kmeans/figures/kmeans_elbow_method.png)
+Elbow method showing the within-cluster sum of squares (WCSS) for different cluster counts.
 
 #### Silhouette Scores
-Silhouette scores for each cluster count confirm 2 clusters have the best cohesion and separation.
-
 ![Silhouette Scores for K-Means](./kmeans/figures/kmeans_silhouette_scores.png)
+Silhouette scores for each cluster count to confirm the best cohesion and separation.
 
 #### K-Means Clusters on PCA-Reduced Data (2 Clusters)
+![K-Means Clusters (2 Clusters)](./kmeans/figures/kmeans_clusters_2.png)
 Visualization of the 2 clusters after PCA dimensionality reduction.
 
-![K-Means Clusters (2 Clusters)](./kmeans/figures/kmeans_clusters_2.png)
-
 #### PCA Projection: Ground Truth vs. K-Means Clusters
-Comparison of true labels (color) with K-Means cluster assignments (marker shape).
-
 ![PCA Projection - Ground Truth vs. K-Means Clusters](./kmeans/figures/pca_groundtruth_vs_clusters_2.png)
-
----
+Comparison of true labels (color) with K-Means cluster assignments (marker shape).
 
 ### SVM Classification
 
 #### Confusion Matrix
-The SVM confusion matrix shows true vs. predicted labels.
-
 ![SVM Confusion Matrix](./svm/figures/svm_confusion_matrix.png)
+SVM confusion matrix showing true vs. predicted labels.
 
 #### ROC Curve
-ROC curve and AUC measure the classifier’s ability to distinguish benign vs. malignant tumors.
-
 ![SVM ROC Curve](./svm/figures/svm_roc_curve.png)
+ROC curve and AUC showing the measure of the classifier’s ability to distinguish benign vs. malignant tumors.
 
 #### Learning Curve
+![SVM Learning Curve](./svm/figures/svm_learning_curve.png)
 Training and cross-validation accuracy vs. number of training samples.
 
-![SVM Learning Curve](./svm/figures/svm_learning_curve.png)
-
 #### Cross-Validation Accuracy Distribution
+![Cross-Validation Accuracy Distribution](./svm/figures/svm_cv_accuracy_distribution.png)
 Histogram showing accuracy across 50 repeated stratified CV runs.
 
-![Cross-Validation Accuracy Distribution](./svm/figures/svm_cv_accuracy_distribution.png)
-
 #### Stratified K-Fold Accuracy Distribution
+![Stratified K-Fold Accuracy Distribution](./svm/figures/svm_skf_accuracy_distribution.png)
 Accuracy distribution from manual 5-fold stratified cross-validation.
 
-![Stratified K-Fold Accuracy Distribution](./svm/figures/svm_skf_accuracy_distribution.png)
+### Quantitative Metrics
+### K-Means Quantitative Metrics
 
-### Discussion
+| k | Inertia   | Silhouette Score | ARI   | NMI   |
+|---|-----------|-----------------|-------|-------|
+| 2 | 10333.58  | 0.365           | 0.671 | 0.555 |
+| 3 | 8804.70   | 0.333           | 0.561 | 0.502 |
+
+
+### SVM Quantitative Metrics
+
+| Metric                           | Value   |
+|---------------------------------|---------|
+| Accuracy                          | 0.9825 |
+| Precision (Malignant)             | 0.9861 |
+| Recall (Malignant)                | 0.9861 |
+| F1 Score (Malignant)              | 0.9861 |
+| ROC-AUC                           | 0.9950 |
+| CV Mean Accuracy (50 runs)        | 0.9149 |
+| CV Std Dev (50 runs)              | 0.0203 |
+| Stratified K-Fold Mean Accuracy   | 0.9772 |
+| Stratified K-Fold Std Dev         | 0.0163 |
+
+
+### Analysis of Kmeans and SVM models
 
 ### K-Means
 The K-means clustering algorithm has showed that there are inherent groupings of the data. Verification of this result using both the elbow method and silhouette scores confirmed that k=2 is the optimal number of clusters, which corresponds to benign and malignant tumors. The inertia for k=2 is 10333.58 and the silhouette score is 0.365. External validation metrics also support k=2 with an ARI of 0.671 and NMI of 0.555. On the other hand, k=3 has a lower inertia of 8804.70 with a lower silhouette score of 0.333 and ARI/NMI values of 0.561 and 0.502. This suggests that k=3 does capture additional sub-structure within the data but does not enhance alignment with the true benign/malignant labels. K-means projections onto PCA further demonstrate that K-means clustering does capture the primary separation of classes, but some overlap exists. Overall, K-means clustering successfully identifies broad patterns in the data but cannot accurately classify tumors for clinical decision-making purposes.
