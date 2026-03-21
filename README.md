@@ -34,20 +34,27 @@ SVM is a supervised algorithm that classifies by maximizing the margin between c
 
 
 ## Results and Discussion
+### K-Means Clustering
+
+#### Elbow Method
+The elbow method shows the within-cluster sum of squares (WCSS) for different cluster counts. The “elbow” occurs at 2 clusters, suggesting this as the optimal choice.
+
+![Elbow Method for K-Means](./kmeans/figures/kmeans_elbow_method.png)
+
 #### Silhouette Scores
 Silhouette scores for each cluster count confirm 2 clusters have the best cohesion and separation.
 
-![Silhouette Scores for K-Means](./kmeans/silhouette_scores.png)
+![Silhouette Scores for K-Means](./kmeans/figures/kmeans_silhouette_scores.png)
 
 #### K-Means Clusters on PCA-Reduced Data (2 Clusters)
 Visualization of the 2 clusters after PCA dimensionality reduction.
 
-![K-Means Clusters (2 Clusters)](./kmeans/kmeans_clusters_2.png)
+![K-Means Clusters (2 Clusters)](./kmeans/figures/kmeans_clusters_2.png)
 
 #### PCA Projection: Ground Truth vs. K-Means Clusters
 Comparison of true labels (color) with K-Means cluster assignments (marker shape).
 
-![PCA Projection - Ground Truth vs. K-Means Clusters](./kmeans/pca_groundtruth_vs_clusters_2.png)
+![PCA Projection - Ground Truth vs. K-Means Clusters](./kmeans/figures/pca_groundtruth_vs_clusters_2.png)
 
 ---
 
@@ -56,50 +63,29 @@ Comparison of true labels (color) with K-Means cluster assignments (marker shape
 #### Confusion Matrix
 The SVM confusion matrix shows true vs. predicted labels.
 
-![SVM Confusion Matrix](./svm/svm_confusion_matrix.png)
+![SVM Confusion Matrix](./svm/figures/svm_confusion_matrix.png)
 
 #### ROC Curve
 ROC curve and AUC measure the classifier’s ability to distinguish benign vs. malignant tumors.
 
-![SVM ROC Curve](./svm/svm_roc_curve.png)
+![SVM ROC Curve](./svm/figures/svm_roc_curve.png)
 
 #### Learning Curve
 Training and cross-validation accuracy vs. number of training samples.
 
-![SVM Learning Curve](./svm/svm_learning_curve.png)
+![SVM Learning Curve](./svm/figures/svm_learning_curve.png)
 
 #### Cross-Validation Accuracy Distribution
 Histogram showing accuracy across 50 repeated stratified CV runs.
 
-![Cross-Validation Accuracy Distribution](./svm/svm_cv_accuracy_distribution.png)
+![Cross-Validation Accuracy Distribution](./svm/figures/svm_cv_accuracy_distribution.png)
 
 #### Stratified K-Fold Accuracy Distribution
 Accuracy distribution from manual 5-fold stratified cross-validation.
 
-![Stratified K-Fold Accuracy Distribution](./svm/svm_skf_accuracy_distribution.png)
-#### Supervised Learning Evaluation (SVM and XGBoost)
+![Stratified K-Fold Accuracy Distribution](./svm/figures/svm_skf_accuracy_distribution.png)
 
-1. Confusion Matrix: True Positives (TP), False Positives (FP), True Negatives (TN), False Negatives (FN)
-
-2. Recall (Malignant Class): proportion of actual malignant tumors correctly identified: Recall = TP / (TP + FN)
-
-3. Precision (Malignant Class): proportion of predicted malignant tumors that are truly malignant: Precision = TP / (TP + FP).
-
-4. F1-Score: harmonic mean of precision and recall: F1 = 2 * (Precision * Recall) / (Precision + Recall)
-
-5. Receiver Operating Characteristic Area Under the Curve (ROC-AUC) for comparing SVM and XGBoost.
-
-6. Balanced Accuracy: accounts for class imbalance by averaging recall across classes, preventing inflated performance estimates from majority-class dominance.
-
-#### Unsupervised Learning Evaluation (K-Means)
-
-1. Adjusted Rand Index (ARI): measures how well clusters align with true benign and malignant labels, adjusted for chance.
-
-2. Normalized Mutual Information (NMI): measures how much diagnostic information (benign vs. malignant) is captured by the clusters.
-
-3. Silhouette Score: evaluates cluster separation and cohesion to determine whether tumors form distinct groups in feature space without labels.
-
-4. Model Generalization: cross-validation mean, standard deviation, and training–validation gap are reported to ensure clustering stability and avoid overfitting.
+---
 
 ### Project Goals
 Our goal is to compare XGBoost and SVM performance while using K-Means to identify latent feature patterns. We prioritize clinical sustainability through high recall and model transparency. We anticipate accuracies near 98.7%, identifying key morphological predictors like texture and area for clinical decision support.
