@@ -197,23 +197,23 @@ https://github.gatech.edu/ashah726/ashah726.github.io
 ```
 /kmeans/: Contains files related to the K-Means clustering algorithm.
 /kmeans/figures/: Visualizations for K-Means analysis:
-/kmeans/figures/kmeans_clusters_2.png: Scatter plot of clustered data points.
-/kmeans/figures/kmeans_elbow_method.png: Plot showing the optimal number of clusters (K).
-/kmeans/figures/kmeans_silhouette_scores.png: Evaluation of cluster consistency.
-/kmeans/figures/pca_groundtruth_vs_clusters.png: Comparative analysis using Principal Component Analysis.
+/kmeans/figures/kmeans_clusters_2.png: Scatter plot of clustered data points (2 clusters).
+/kmeans/figures/kmeans_elbow_method.png: Plot showing the optimal number of clusters (K) using the elbow method.
+/kmeans/figures/kmeans_silhouette_scores.png: Silhouette scores evaluating cluster consistency.
+/kmeans/figures/pca_groundtruth_vs_clusters_2.png: PCA projection comparing true labels vs. K-Means clusters.
 /kmeans/breast_cancer_kmeans.ipynb: Jupyter Notebook implementing K-Means on the breast cancer dataset.
 
 /svm/: Contains files related to the Support Vector Machine (SVM) model.
 /svm/figures/: Performance plots for the SVM model:
-/svm/figures/svm_confusion_matrix.png: Visual representation of classification performance.
-/svm/figures/svm_cv_accuracy_distribution.png: Distribution of accuracy across Cross-Validation folds.
-/svm/figures/svm_learning_curve.png: Plot of training vs. validation score over training samples.
-/svm/figures/svm_roc_curve.png: Receiver Operating Characteristic curve for model sensitivity.
-/svm/figures/svm_skf_accuracy_distribution.png: Accuracy distribution using Stratified K-Fold.
+/svm/figures/svm_confusion_matrix.png: Confusion matrix showing classification performance.
+/svm/figures/svm_cv_accuracy_distribution.png: Distribution of accuracy across 50 Cross-Validation runs.
+/svm/figures/svm_learning_curve.png: Learning curve showing training vs. validation accuracy over sample size.
+/svm/figures/svm_roc_curve.png: ROC curve illustrating model sensitivity and specificity.
+/svm/figures/svm_skf_accuracy_distribution.png: Accuracy distribution from 5-fold Stratified K-Fold cross-validation.
 /svm/breast_cancer_svm.ipynb: Jupyter Notebook implementing an SVM model on the breast cancer dataset.
 
 /README.md: Project documentation (proposal & midterm).
-/_config.yaml: Configuration file used for project settings, environment configuration, and static site generation (GitHub Pages).
+/_config.yaml: Configuration file for GitHub Pages site settings and environment configuration.
 ```
 
 # Proposal Slidedeck & Video 
