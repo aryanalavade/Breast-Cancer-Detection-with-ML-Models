@@ -40,40 +40,49 @@ SVM is a supervised algorithm that classifies by maximizing the margin between c
 
 #### Elbow Method
 ![Elbow Method for K-Means](./kmeans/figures/kmeans_elbow_method.png)
+
 Elbow method showing the within-cluster sum of squares (WCSS) for different cluster counts.
 
 #### Silhouette Scores
 ![Silhouette Scores for K-Means](./kmeans/figures/kmeans_silhouette_scores.png)
+
 Silhouette scores for each cluster count to confirm the best cohesion and separation.
 
 #### K-Means Clusters on PCA-Reduced Data (2 Clusters)
 ![K-Means Clusters (2 Clusters)](./kmeans/figures/kmeans_clusters_2.png)
+
 Visualization of the 2 clusters after PCA dimensionality reduction.
 
 #### PCA Projection: Ground Truth vs. K-Means Clusters
 ![PCA Projection - Ground Truth vs. K-Means Clusters](./kmeans/figures/pca_groundtruth_vs_clusters_2.png)
+
 Comparison of true labels (color) with K-Means cluster assignments (marker shape).
 
 ### SVM Classification
 
 #### Confusion Matrix
 ![SVM Confusion Matrix](./svm/figures/svm_confusion_matrix.png)
+
 SVM confusion matrix showing true vs. predicted labels.
 
 #### ROC Curve
 ![SVM ROC Curve](./svm/figures/svm_roc_curve.png)
+
 ROC curve and AUC showing the measure of the classifier’s ability to distinguish benign vs. malignant tumors.
 
 #### Learning Curve
 ![SVM Learning Curve](./svm/figures/svm_learning_curve.png)
+
 Training and cross-validation accuracy vs. number of training samples.
 
 #### Cross-Validation Accuracy Distribution
 ![Cross-Validation Accuracy Distribution](./svm/figures/svm_cv_accuracy_distribution.png)
+
 Histogram showing accuracy across 50 repeated stratified CV runs.
 
 #### Stratified K-Fold Accuracy Distribution
 ![Stratified K-Fold Accuracy Distribution](./svm/figures/svm_skf_accuracy_distribution.png)
+
 Accuracy distribution from manual 5-fold stratified cross-validation.
 
 ### Quantitative Metrics
@@ -111,18 +120,29 @@ The SVM classifier demonstrated high predictive performance, achieving an overal
 ### Comparative Analysis
 When comparing the two methods, K-Means is a useful exploratory tool for finding latent structure and possible subgroups in the data, but it cannot achieve the predictive accuracy needed for clinical decision support due to its unsupervised nature. On the other hand, SVM offers a robust supervised classification framework with strong generalization and high sensitivity to malignant cases. Supervised models are still necessary for practical clinical predictions, but combining unsupervised insights with supervised classification may enhance interpretability and feature selection.
 
-### Next Steps
-1. Implement XGBoost and compare its performance with SVM.  
-2. Conduct feature importance analysis to improve interpretability.  
-3. Explore ensemble models combining SVM and XGBoost predictions.  
-4. Investigate alternative dimensionality reduction techniques (e.g., t-SNE, UMAP) to visualize tumor features more effectively.
 ---
 
 ### Project Goals
 Our goal is to compare XGBoost and SVM performance while using K-Means to identify latent feature patterns. We prioritize clinical sustainability through high recall and model transparency. We anticipate accuracies near 98.7%, identifying key morphological predictors like texture and area for clinical decision support.
 
 ### Next Steps
-We plan to refine our current model developments (K-means & SVM) and work on XGBoost implementation. [need to add more i think?]
+1. **Implement XGBoost**  
+   Develop and tune an XGBoost classifier on the same breast cancer dataset and compare its performance with SVM using accuracy, recall, and ROC-AUC.
+
+2. **Feature Importance Analysis**  
+   Identify the most influential features for tumor classification using SVM coefficients and XGBoost feature importance. This will enhance interpretability for clinical insights.
+
+3. **Ensemble Methods**  
+   Explore combining SVM and XGBoost predictions using ensemble approaches (e.g., voting, stacking) to potentially improve predictive performance and robustness.
+
+4. **Alternative Dimensionality Reduction**  
+   Apply t-SNE or UMAP to visualize tumor features and cluster structures, complementing PCA for richer insights into the dataset’s latent structure.
+
+5. **Extended Cross-Validation & Hyperparameter Tuning**  
+   Conduct more extensive hyperparameter searches and repeated cross-validation for both supervised and unsupervised models to ensure stability and reproducibility.
+
+6. **Integration of Unsupervised Insights**  
+   Investigate how K-Means cluster assignments or latent patterns could inform feature selection or model interpretation for supervised classifiers.
 
 ## References
 [1] L. Shockney, “Breast Cancer Facts & Statistics,” National Breast Cancer Foundation, Jun. 15, 2023. https://www.nationalbreastcancer.org/breast-cancer-facts/
