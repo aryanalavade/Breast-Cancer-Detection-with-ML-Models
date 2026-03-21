@@ -169,7 +169,7 @@ https://docs.google.com/spreadsheets/d/1q1Ha7X4cs_rv75ANg4HArgvxn4CUn1_MCZZd7z7s
 | Shreema Vijayakumar  | GitHub repo updates, Proposal (Intro, Dataset Analysis, Problem), Slides & Video (Intro, Dataset Analysis, Problem), SVM model code (base code & initial visualizations)|
 | Suhaani Gupta  | GitHub repo updates, Proposal (Supervised & Unsupervised Methods), Slides & Video (Supervised & Unsupervised Methods), K-means code (data preprocessing, base code, visualizations) |
 | Galadriel Cho  | Proposal (Data Preprocessing & Algorithms/Models), Slides & Video (Data Preprocessing & Algorithms/Models, K-means code (data preprocessing, base code, visualizations) |
-| Arya Nalavade  | Proposal (Goals & Expected Results), Slides & Video (Goals & Expected Results), kmeans and svm model evaluation code (quantitative metrics), Midterm (Results & Discussion) |
+| Arya Nalavade  | Proposal (Goals & Expected Results), Slides & Video (Goals & Expected Results), K-means & SVM code (additional quantitative metrics), Midterm (Results & Discussion) |
 
 # GitHub Repository
 https://github.gatech.edu/ashah726/ashah726.github.io
