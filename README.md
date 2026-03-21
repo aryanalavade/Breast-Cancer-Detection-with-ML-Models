@@ -33,11 +33,50 @@ XGBoost is a supervised prediction algorithm that sequentially learns through gr
 SVM is a supervised algorithm that classifies by maximizing the margin between classes. Particularly powerful for binary classification, it will be applied to predict between benign and malignant tumors. We will experiment with both linear and RBF kernels using sklearn.svm.SVC.
 
 
-## Potential Results and Discussion
+## Results and Discussion
+#### Silhouette Scores
+Silhouette scores for each cluster count confirm 2 clusters have the best cohesion and separation.
 
-### Quantitative Metrics
-We plan to use standard metrics defined in the scikit-learn metrics documentation. Because this is a binary classification project (Benign vs. Malignant), and false negatives are clinically important, our evaluation prioritizes recall for the malignant class.
+![Silhouette Scores for K-Means](./kmeans/silhouette_scores.png)
 
+#### K-Means Clusters on PCA-Reduced Data (2 Clusters)
+Visualization of the 2 clusters after PCA dimensionality reduction.
+
+![K-Means Clusters (2 Clusters)](./kmeans/kmeans_clusters_2.png)
+
+#### PCA Projection: Ground Truth vs. K-Means Clusters
+Comparison of true labels (color) with K-Means cluster assignments (marker shape).
+
+![PCA Projection - Ground Truth vs. K-Means Clusters](./kmeans/pca_groundtruth_vs_clusters_2.png)
+
+---
+
+### SVM Classification
+
+#### Confusion Matrix
+The SVM confusion matrix shows true vs. predicted labels.
+
+![SVM Confusion Matrix](./svm/svm_confusion_matrix.png)
+
+#### ROC Curve
+ROC curve and AUC measure the classifier’s ability to distinguish benign vs. malignant tumors.
+
+![SVM ROC Curve](./svm/svm_roc_curve.png)
+
+#### Learning Curve
+Training and cross-validation accuracy vs. number of training samples.
+
+![SVM Learning Curve](./svm/svm_learning_curve.png)
+
+#### Cross-Validation Accuracy Distribution
+Histogram showing accuracy across 50 repeated stratified CV runs.
+
+![Cross-Validation Accuracy Distribution](./svm/svm_cv_accuracy_distribution.png)
+
+#### Stratified K-Fold Accuracy Distribution
+Accuracy distribution from manual 5-fold stratified cross-validation.
+
+![Stratified K-Fold Accuracy Distribution](./svm/svm_skf_accuracy_distribution.png)
 #### Supervised Learning Evaluation (SVM and XGBoost)
 
 1. Confusion Matrix: True Positives (TP), False Positives (FP), True Negatives (TN), False Negatives (FN)
