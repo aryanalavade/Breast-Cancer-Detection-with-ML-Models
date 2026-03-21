@@ -33,9 +33,8 @@ XGBoost is a supervised prediction algorithm that sequentially learns through gr
 SVM is a supervised algorithm that classifies by maximizing the margin between classes. Particularly powerful for binary classification, it will be applied to predict between benign and malignant tumors. We will experiment with both linear and RBF kernels using sklearn.svm.SVC.
 
 
-## Results and Discussion
+## Results Visualizations & Metrics
 
-### Visualizations
 ### K-Means Clustering
 
 #### Elbow Method
@@ -86,7 +85,8 @@ Histogram showing accuracy across 50 repeated stratified CV runs.
 Accuracy distribution from manual 5-fold stratified cross-validation.
 
 ### Quantitative Metrics
-### K-Means Quantitative Metrics
+
+#### K-Means Quantitative Metrics
 
 | k | Inertia   | Silhouette Score | ARI   | NMI   |
 |---|-----------|-----------------|-------|-------|
@@ -94,7 +94,7 @@ Accuracy distribution from manual 5-fold stratified cross-validation.
 | 3 | 8804.70   | 0.333           | 0.561 | 0.502 |
 
 
-### SVM Quantitative Metrics
+#### SVM Quantitative Metrics
 
 | Metric                           | Value   |
 |---------------------------------|---------|
@@ -109,31 +109,34 @@ Accuracy distribution from manual 5-fold stratified cross-validation.
 | Stratified K-Fold Std Dev         | 0.0163 |
 
 
-### Analysis of Kmeans and SVM models
+## Results Discussion
 
 ### K-Means
 The K-means clustering algorithm has showed that there are inherent groupings of the data. Verification of this result using both the elbow method and silhouette scores confirmed that k=2 is the optimal number of clusters, which corresponds to benign and malignant tumors. The inertia for k=2 is 10333.58 and the silhouette score is 0.365. External validation metrics also support k=2 with an ARI of 0.671 and NMI of 0.555. On the other hand, k=3 has a lower inertia of 8804.70 with a lower silhouette score of 0.333 and ARI/NMI values of 0.561 and 0.502. This suggests that k=3 does capture additional sub-structure within the data but does not enhance alignment with the true benign/malignant labels. K-means projections onto PCA further demonstrate that K-means clustering does capture the primary separation of classes, but some overlap exists. Overall, K-means clustering successfully identifies broad patterns in the data but cannot accurately classify tumors for clinical decision-making purposes.
 
-### SVM Insights
-The SVM classifier demonstrated high predictive performance, achieving an overall accuracy of 0.982, precision of 0.986, recall of 0.986, and an F1 score of 0.986. The ROC-AUC score of 0.995 indicates good discriminative power for distinguishing between benign and malignant tumors. The learning curve indicates that training accuracy and cross-validation accuracy converge, which implies that there was little overfitting. The cross-validation accuracy over 50 runs resulted in a mean accuracy of 0.915 with a standard deviation of 0.020, while the stratified 5-fold cross-validation resulted in a mean accuracy of 0.977 with a standard deviation of 0.016. This indicates that the performance of the SVM model is reliable.
+### SVM 
+The SVM classifier demonstrated high predictive performance, achieving an overall accuracy of 0.982, precision of 0.986, recall of 0.986, and an F1 score of 0.986. The ROC-AUC score of 0.995 indicates it can very accurately distinguish between benign and malignant tumors. The learning curve indicates that training accuracy and cross-validation accuracy converge, which implies that there was little overfitting. The cross-validation accuracy over 50 runs resulted in a mean accuracy of 0.915 with a standard deviation of 0.020, while the stratified 5-fold cross-validation resulted in a mean accuracy of 0.977 with a standard deviation of 0.016. This indicates that the performance of the SVM model is reliable.
 
 ### Comparative Analysis
 When comparing the two methods, K-Means is a useful exploratory tool for finding latent structure and possible subgroups in the data, but it cannot achieve the predictive accuracy needed for clinical decision support due to its unsupervised nature. On the other hand, SVM offers a robust supervised classification framework with strong generalization and high sensitivity to malignant cases. Supervised models are still necessary for practical clinical predictions, but combining unsupervised insights with supervised classification may enhance interpretability and feature selection.
 
-### Next Steps
+## Project Goals (Proposal)
+Our goal is to compare XGBoost and SVM performance while using K-Means to identify latent feature patterns. We prioritize clinical sustainability through high recall and model transparency. We anticipate accuracies near or above 95%, identifying key morphological predictors like texture and area for clinical decision support.
+
+## Next Steps (post-Midterm)
 1. **Implement XGBoost**  
-   Develop and tune an XGBoost classifier on the same breast cancer dataset and compare its performance with SVM using accuracy, recall, and ROC-AUC.
+   Develop and tune an XGBoost classifier and compare its performance with SVM using accuracy, recall, and ROC-AUC.
 
 2. **Feature Importance Analysis**  
-   Identify the most influential features for tumor classification using SVM coefficients and XGBoost feature importance. This will enhance interpretability for clinical insights.
+   Identify the most influential features for tumor classification using SVM coefficients and XGBoost feature importance to enhance interpretability for clinical insights.
 
 3. **Ensemble Methods**  
    Explore combining SVM and XGBoost predictions using ensemble approaches (e.g., voting, stacking) to potentially improve predictive performance and robustness.
 
-4. **Alternative Dimensionality Reduction**  
-   Apply t-SNE or UMAP to visualize tumor features and cluster structures, complementing PCA for richer insights into the dataset’s latent structure.
+4. **Alternative Feature & Dimensionality Reduction**  
+   Apply t-SNE or UMAP to visualize tumor features and cluster structures, complementing PCA for exploring the dataset’s latent structure.
 
-5. **Extended Cross-Validation & Hyperparameter Tuning**  
+5. **Additional Cross-Validation & Hyperparameter Tuning**  
    Conduct more extensive hyperparameter searches and repeated cross-validation for both supervised and unsupervised models to ensure stability and reproducibility.
 
 6. **Integration of Unsupervised Insights**  
@@ -174,37 +177,44 @@ https://github.gatech.edu/ashah726/ashah726.github.io
 ## Directory
 ```
 .
-├── kmeans
-│ ├── breast_cancer_kmeans.ipynb
-│ └── figures/
-│ ├── kmeans_clusters_2.png
-│ ├── kmeans_elbow_method.png
-│ ├── kmeans_silhouette_scores.png
-│ └── pca_groundtruth_vs_clusters_2.png
-├── svm
-│ ├── breast_cancer_svm.ipynb
-│ ├── requirements.txt
-│ ├── gitignore.txt
-│ └── figures/
-│ ├── svm_confusion_matrix.png
-│ ├── svm_roc_curve.png
-│ ├── svm_learning_curve.png
-│ ├── svm_cv_accuracy_distribution.png
-│ └── svm_skf_accuracy_distribution.png
+├── kmeans/
+│   ├── figures/
+│   │   ├── kmeans_clusters_2.png
+│   │   ├── kmeans_elbow_method.png
+│   │   ├── kmeans_silhouette_scores.png
+│   │   └── pca_groundtruth_vs_clusters.png
+│   └── breast_cancer_kmeans.ipynb
+├── svm/
+│   ├── figures/
+│   │   ├── svm_confusion_matrix.png
+│   │   ├── svm_cv_accuracy_distribution.png
+│   │   ├── svm_learning_curve.png
+│   │   ├── svm_roc_curve.png
+│   │   └── svm_skf_accuracy_distribution.png
+│   ├── breast_cancer_svm.ipynb
+│   ├── gitignore.txt
+│   └── requirements.txt
 ├── README.md
 └── _config.yaml
 ```
 
 ```
 /kmeans/: Contains files related to the K-Means clustering algorithm.
+/kmeans/figures/: Visualizations for K-Means analysis:
+/kmeans/figures/kmeans_clusters_2.png: Scatter plot of clustered data points.
+/kmeans/figures/kmeans_elbow_method.png: Plot showing the optimal number of clusters (K).
+/kmeans/figures/kmeans_silhouette_scores.png: Evaluation of cluster consistency.
+/kmeans/figures/pca_groundtruth_vs_clusters.png: Comparative analysis using Principal Component Analysis.
 /kmeans/breast_cancer_kmeans.ipynb: Jupyter Notebook implementing K-Means on the breast cancer dataset.
-/kmeans/figures/: Contains visualizations generated for K-Means analysis (elbow method, silhouette scores, cluster plots, PCA projections).
 
 /svm/: Contains files related to the Support Vector Machine (SVM) model.
-/svm/breast_cancer_svm.ipynb: Jupyter Notebook implementing SVM classification on the breast cancer dataset.
-/svm/figures/: Contains visualizations generated for SVM evaluation (confusion matrix, ROC curve, learning curves, cross-validation distributions).
-/svm/gitignore.txt: Specifies files and directories to be ignored by version control.
-/svm/requirements.txt: Lists Python dependencies required to run the notebook code.
+/svm/figures/: Performance plots for the SVM model:
+/svm/figures/svm_confusion_matrix.png: Visual representation of classification performance.
+/svm/figures/svm_cv_accuracy_distribution.png: Distribution of accuracy across Cross-Validation folds.
+/svm/figures/svm_learning_curve.png: Plot of training vs. validation score over training samples.
+/svm/figures/svm_roc_curve.png: Receiver Operating Characteristic curve for model sensitivity.
+/svm/figures/svm_skf_accuracy_distribution.png: Accuracy distribution using Stratified K-Fold.
+/svm/breast_cancer_svm.ipynb: Jupyter Notebook implementing an SVM model on the breast cancer dataset.
 
 /README.md: Project documentation (proposal & midterm).
 /_config.yaml: Configuration file used for project settings, environment configuration, and static site generation (GitHub Pages).
