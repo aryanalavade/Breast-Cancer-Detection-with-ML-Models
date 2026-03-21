@@ -120,11 +120,6 @@ The SVM classifier demonstrated high predictive performance, achieving an overal
 ### Comparative Analysis
 When comparing the two methods, K-Means is a useful exploratory tool for finding latent structure and possible subgroups in the data, but it cannot achieve the predictive accuracy needed for clinical decision support due to its unsupervised nature. On the other hand, SVM offers a robust supervised classification framework with strong generalization and high sensitivity to malignant cases. Supervised models are still necessary for practical clinical predictions, but combining unsupervised insights with supervised classification may enhance interpretability and feature selection.
 
----
-
-### Project Goals
-Our goal is to compare XGBoost and SVM performance while using K-Means to identify latent feature patterns. We prioritize clinical sustainability through high recall and model transparency. We anticipate accuracies near 98.7%, identifying key morphological predictors like texture and area for clinical decision support.
-
 ### Next Steps
 1. **Implement XGBoost**  
    Develop and tune an XGBoost classifier on the same breast cancer dataset and compare its performance with SVM using accuracy, recall, and ROC-AUC.
@@ -143,6 +138,10 @@ Our goal is to compare XGBoost and SVM performance while using K-Means to identi
 
 6. **Integration of Unsupervised Insights**  
    Investigate how K-Means cluster assignments or latent patterns could inform feature selection or model interpretation for supervised classifiers.
+
+---
+
+
 
 ## References
 [1] L. Shockney, “Breast Cancer Facts & Statistics,” National Breast Cancer Foundation, Jun. 15, 2023. https://www.nationalbreastcancer.org/breast-cancer-facts/
@@ -167,7 +166,7 @@ https://docs.google.com/spreadsheets/d/1q1Ha7X4cs_rv75ANg4HArgvxn4CUn1_MCZZd7z7s
 | Shreema Vijayakumar  | GitHub repo updates, Proposal (Intro, Dataset Analysis, Problem), Slides & Video (Intro, Dataset Analysis, Problem), SVM model code (base code & initial visualizations)|
 | Suhaani Gupta  | GitHub repo updates, Proposal (Supervised & Unsupervised Methods), Slides & Video (Supervised & Unsupervised Methods), K-means code (data preprocessing, base code, visualizations) |
 | Galadriel Cho  | Proposal (Data Preprocessing & Algorithms/Models), Slides & Video (Data Preprocessing & Algorithms/Models, K-means code (data preprocessing, base code, visualizations) |
-| Arya Nalavade  | Proposal (Goals & Expected Results), Slides & Video (Goals & Expected Results), Midterm (Results & Discussion) |
+| Arya Nalavade  | Proposal (Goals & Expected Results), Slides & Video (Goals & Expected Results), kmeans and svm model evaluation code (quantitative metrics), Midterm (Results & Discussion) |
 
 # GitHub Repository
 https://github.gatech.edu/ashah726/ashah726.github.io
@@ -176,11 +175,22 @@ https://github.gatech.edu/ashah726/ashah726.github.io
 ```
 .
 ├── kmeans
-│   └── breast_cancer_kmeans.ipynb
+│ ├── breast_cancer_kmeans.ipynb
+│ └── figures/
+│ ├── kmeans_clusters_2.png
+│ ├── kmeans_elbow_method.png
+│ ├── kmeans_silhouette_scores.png
+│ └── pca_groundtruth_vs_clusters_2.png
 ├── svm
-│   ├── breast_cancer_svm.ipynb
-│   ├── gitignore.txt
-│   └── requirements.txt
+│ ├── breast_cancer_svm.ipynb
+│ ├── requirements.txt
+│ ├── gitignore.txt
+│ └── figures/
+│ ├── svm_confusion_matrix.png
+│ ├── svm_roc_curve.png
+│ ├── svm_learning_curve.png
+│ ├── svm_cv_accuracy_distribution.png
+│ └── svm_skf_accuracy_distribution.png
 ├── README.md
 └── _config.yaml
 ```
@@ -188,9 +198,11 @@ https://github.gatech.edu/ashah726/ashah726.github.io
 ```
 /kmeans/: Contains files related to the K-Means clustering algorithm.
 /kmeans/breast_cancer_kmeans.ipynb: Jupyter Notebook implementing K-Means on the breast cancer dataset.
+/kmeans/figures/: Contains visualizations generated for K-Means analysis (elbow method, silhouette scores, cluster plots, PCA projections).
 
-/svm/: Contains files r related to the Support Vector Machine (SVM) model.
-/svm/breast_cancer_svm.ipynb: Jupyter Notebook implementing an SVM model on the breast cancer dataset.
+/svm/: Contains files related to the Support Vector Machine (SVM) model.
+/svm/breast_cancer_svm.ipynb: Jupyter Notebook implementing SVM classification on the breast cancer dataset.
+/svm/figures/: Contains visualizations generated for SVM evaluation (confusion matrix, ROC curve, learning curves, cross-validation distributions).
 /svm/gitignore.txt: Specifies files and directories to be ignored by version control.
 /svm/requirements.txt: Lists Python dependencies required to run the notebook code.
 
