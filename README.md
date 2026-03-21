@@ -34,6 +34,8 @@ SVM is a supervised algorithm that classifies by maximizing the margin between c
 
 
 ## Results and Discussion
+
+### Results
 ### K-Means Clustering
 
 #### Elbow Method
@@ -85,24 +87,26 @@ Accuracy distribution from manual 5-fold stratified cross-validation.
 
 ![Stratified K-Fold Accuracy Distribution](./svm/figures/svm_skf_accuracy_distribution.png)
 
+### Discussion
+
+### K-Means
+The K-means clustering algorithm has showed that there are inherent groupings of the data. Verification of this result using both the elbow method and silhouette scores confirmed that k=2 is the optimal number of clusters, which corresponds to benign and malignant tumors. The inertia for k=2 is 10333.58 and the silhouette score is 0.365. External validation metrics also support k=2 with an ARI of 0.671 and NMI of 0.555. On the other hand, k=3 has a lower inertia of 8804.70 with a lower silhouette score of 0.333 and ARI/NMI values of 0.561 and 0.502. This suggests that k=3 does capture additional sub-structure within the data but does not enhance alignment with the true benign/malignant labels. K-means projections onto PCA further demonstrate that K-means clustering does capture the primary separation of classes, but some overlap exists. Overall, K-means clustering successfully identifies broad patterns in the data but cannot accurately classify tumors for clinical decision-making purposes.
+
+### SVM Insights
+The SVM classifier demonstrated high predictive performance, achieving an overall accuracy of 0.982, precision of 0.986, recall of 0.986, and an F1 score of 0.986. The ROC-AUC score of 0.995 indicates good discriminative power for distinguishing between benign and malignant tumors. The learning curve indicates that training accuracy and cross-validation accuracy converge, which implies that there was little overfitting. The cross-validation accuracy over 50 runs resulted in a mean accuracy of 0.915 with a standard deviation of 0.020, while the stratified 5-fold cross-validation resulted in a mean accuracy of 0.977 with a standard deviation of 0.016. This indicates that the performance of the SVM model is reliable.
+
+### Comparative Analysis
+When comparing the two methods, K-Means is a useful exploratory tool for finding latent structure and possible subgroups in the data, but it cannot achieve the predictive accuracy needed for clinical decision support due to its unsupervised nature. On the other hand, SVM offers a robust supervised classification framework with strong generalization and high sensitivity to malignant cases. Supervised models are still necessary for practical clinical predictions, but combining unsupervised insights with supervised classification may enhance interpretability and feature selection.
+
+### Next Steps
+1. Implement XGBoost and compare its performance with SVM.  
+2. Conduct feature importance analysis to improve interpretability.  
+3. Explore ensemble models combining SVM and XGBoost predictions.  
+4. Investigate alternative dimensionality reduction techniques (e.g., t-SNE, UMAP) to visualize tumor features more effectively.
 ---
 
 ### Project Goals
 Our goal is to compare XGBoost and SVM performance while using K-Means to identify latent feature patterns. We prioritize clinical sustainability through high recall and model transparency. We anticipate accuracies near 98.7%, identifying key morphological predictors like texture and area for clinical decision support.
-
-### Expected Results
-We anticipate strong classification performance, as prior studies using SVM with RBF kernels on this dataset have reached accuracies near 98.7% [6]. We expect well-tuned models to yield high ROC-AUC and balanced sensitivity. Furthermore, we expect feature importance analysis to identify morphology variables such as texture and areas as the most significant predictors of malignant, providing interpretable insights for clinical support.
-
-## Results & Discussion
-
-### Visualizations
-
-### Quantitative Metrics
-
-### Analysis of Algorithms / Models
-1. K-means --
-   
-3. SVM -- 
 
 ### Next Steps
 We plan to refine our current model developments (K-means & SVM) and work on XGBoost implementation. [need to add more i think?]
