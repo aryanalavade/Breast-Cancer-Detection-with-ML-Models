@@ -142,10 +142,6 @@ Our goal is to compare XGBoost and SVM performance while using K-Means to identi
 6. **Integration of Unsupervised Insights**  
    Investigate how K-Means cluster assignments or latent patterns could inform feature selection or model interpretation for supervised classifiers.
 
----
-
-
-
 ## References
 [1] L. Shockney, “Breast Cancer Facts & Statistics,” National Breast Cancer Foundation, Jun. 15, 2023. https://www.nationalbreastcancer.org/breast-cancer-facts/
 
