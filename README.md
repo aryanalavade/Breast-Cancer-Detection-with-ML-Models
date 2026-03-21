@@ -197,7 +197,7 @@ https://github.gatech.edu/ashah726/ashah726.github.io
 │   │   ├── kmeans_clusters_2.png
 │   │   ├── kmeans_elbow_method.png
 │   │   ├── kmeans_silhouette_scores.png
-│   │   └── pca_groundtruth_vs_clusters.png
+│   │   └── pca_groundtruth_vs_clusters_2.png
 │   └── breast_cancer_kmeans.ipynb
 ├── svm/
 │   ├── figures/
@@ -205,7 +205,10 @@ https://github.gatech.edu/ashah726/ashah726.github.io
 │   │   ├── svm_cv_accuracy_distribution.png
 │   │   ├── svm_learning_curve.png
 │   │   ├── svm_roc_curve.png
-│   │   └── svm_skf_accuracy_distribution.png
+│   │   ├── svm_skf_accuracy_distribution.png
+│   │   ├── svm_feature_reduction_accuracy_comparison.png
+│   │   ├── svm_pca_explained_variance_ratio.png
+│   │   └── svm_feature_reduction_best_accuracy.png
 │   ├── breast_cancer_svm.ipynb
 │   ├── gitignore.txt
 │   └── requirements.txt
@@ -229,6 +232,9 @@ https://github.gatech.edu/ashah726/ashah726.github.io
 /svm/figures/svm_learning_curve.png: Learning curve showing training vs. validation accuracy over sample size.
 /svm/figures/svm_roc_curve.png: ROC curve illustrating model sensitivity and specificity.
 /svm/figures/svm_skf_accuracy_distribution.png: Accuracy distribution from 5-fold Stratified K-Fold cross-validation.
+/svm/figures/svm_feature_reduction_accuracy_comparison.png: Line plot comparing SVM test accuracy across PCA components and SelectKBest features vs. baseline (all features).
+/svm/figures/svm_pca_explained_variance_ratio.png: Line plot of cumulative explained variance ratio vs. PCA n_components, showing variance captured by PCA dimensions.
+/svm/figures/svm_feature_reduction_best_accuracy.png: Bar plot comparing baseline, best PCA, and best SelectKBest accuracies.
 /svm/breast_cancer_svm.ipynb: Jupyter Notebook implementing an SVM model on the breast cancer dataset.
 
 /README.md: Project documentation (proposal & midterm).
