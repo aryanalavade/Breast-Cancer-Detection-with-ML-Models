@@ -209,9 +209,7 @@ https://github.gatech.edu/ashah726/ashah726.github.io
 │   │   ├── svm_feature_reduction_accuracy_comparison.png
 │   │   ├── svm_pca_explained_variance_ratio.png
 │   │   └── svm_feature_reduction_best_accuracy.png
-│   ├── breast_cancer_svm.ipynb
-│   ├── gitignore.txt
-│   └── requirements.txt
+│   └── breast_cancer_svm.ipynb
 ├── README.md
 └── _config.yaml
 ```
