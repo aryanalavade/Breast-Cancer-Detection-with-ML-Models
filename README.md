@@ -85,17 +85,17 @@ Histogram showing accuracy across 50 repeated stratified CV runs.
 Accuracy distribution from manual 5-fold stratified cross-validation.
 
 #### Feature Reduction Accuracy Comparison
-![Feature Reduction Accuracy Comparison](./svm/figures/svm_feature_reduction_accuracy.png)  
+![Feature Reduction Accuracy Comparison](./svm/figures/svm_feature_reduction_accuracy_comparison.png)  
 
 Test accuracy vs. number of PCA components and SelectKBest features, compared with baseline accuracy.
 
 #### PCA Explained Variance Ratio
-![PCA Explained Variance Ratio](./svm/figures/svm_pca_variance_ratio.png)  
+![PCA Explained Variance Ratio](./svm/figures/svm_pca_explained_variance_ratio.png)  
 
 Cumulative variance captured by PCA components, providing context for feature reduction.
 
 #### Best Accuracy by Reduction Strategy
-![Best Accuracy by Reduction Strategy](./svm/figures/svm_best_accuracy_reduction.png)  
+![Best Accuracy by Reduction Strategy](./svm/figures/svm_feature_reduction_best_accuracy.png)  
 
 Bar chart showing baseline, best PCA, and best SelectKBest accuracy.
 
