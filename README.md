@@ -19,17 +19,17 @@ We aim to maximize recall to ensure no malignancy goes undetected while maintain
 ### Data Preprocessing
 1. Data Cleaning  
 We will drop the non-predictive ID column and programmatically verify the reported lack of missing values.
-3. One Hot Encoding  
+3. One Hot Encoding  (Implemented in Midterm for SVM)
 The Diagnosis column labels (M/B) will be binary encoded as 0 for Benign and 1 for Malignant to facilitate classification.
-4. Dimensionality Reduction (IMPLEMENTED IN MIDTERM for K-MEANS)   
+4. Dimensionality Reduction (Implemented in Midterm for K-means & SVM)   
 We will apply Principal Component Analysis to reduce dimensionality of 30 numerical features while preserving maximum variance. PCA will help reduce multicollinearity, improve computational efficiency, and potentially improve generalization.
 
 ### Algorithms/Models
-1. K-MEANS (IMPLEMENTED IN MIDTERM)   
+1. K-MEANS (Implemented in Midterm)   
 K-Means is an unsupervised algorithm that applies hard clustering to separate our data into groupings based on tumor feature similarities. The intent is to roughly align data within clusters with benign and malignant labels.
 2. XGBoost  
 XGBoost is a supervised prediction algorithm that sequentially learns through gradient boosted decision trees.  XGBoost is not sensitive to linear dependence between features, a beneficial trait given that we begin with 30. We will use the xgboost.XGBClassifier implementation and tune learning rate, max depth, and number of estimators.
-3. SVM  (IMPLEMENTED IN MIDTERM)  
+3. SVM  (Implemented in Midterm)    
 SVM is a supervised algorithm that classifies by maximizing the margin between classes. Particularly powerful for binary classification, it will be applied to predict between benign and malignant tumors. We will experiment with both linear and RBF kernels using sklearn.svm.SVC.
 
 
