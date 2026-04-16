@@ -100,7 +100,6 @@ Cumulative variance captured by PCA components, providing context for feature re
 Bar chart showing baseline, best PCA, and best SelectKBest accuracy.
 
 ### XGBoost
-### XGBoost Classification
 
 #### Confusion Matrix
 ![XGBoost Confusion Matrix](./xgboost/figures/xgboost_confusion_matrix.png)
