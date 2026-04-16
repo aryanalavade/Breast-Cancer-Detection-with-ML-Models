@@ -27,7 +27,7 @@ We will apply Principal Component Analysis to reduce dimensionality of 30 numeri
 ### Algorithms/Models
 1. K-MEANS (Implemented in Midterm)   
 K-Means is an unsupervised algorithm that applies hard clustering to separate our data into groupings based on tumor feature similarities. The intent is to roughly align data within clusters with benign and malignant labels.
-2. XGBoost  
+2. XGBoost (Implemented in Final)
 XGBoost is a supervised prediction algorithm that sequentially learns through gradient boosted decision trees.  XGBoost is not sensitive to linear dependence between features, a beneficial trait given that we begin with 30. We will use the xgboost.XGBClassifier implementation and tune learning rate, max depth, and number of estimators.
 3. SVM  (Implemented in Midterm)    
 SVM is a supervised algorithm that classifies by maximizing the margin between classes. Particularly powerful for binary classification, it will be applied to predict between benign and malignant tumors. We will experiment with both linear and RBF kernels using sklearn.svm.SVC.
@@ -67,7 +67,7 @@ SVM confusion matrix showing true vs. predicted labels.
 #### ROC Curve
 ![SVM ROC Curve](./svm/figures/svm_roc_curve.png)
 
-ROC curve and AUC showing the measure of the classifier’s ability to distinguish benign vs. malignant tumors.
+ROC curve and AUC showing the measure of SVM classifier’s ability to distinguish benign vs. malignant tumors.
 
 #### Learning Curve
 ![SVM Learning Curve](./svm/figures/svm_learning_curve.png)
@@ -99,6 +99,33 @@ Cumulative variance captured by PCA components, providing context for feature re
 
 Bar chart showing baseline, best PCA, and best SelectKBest accuracy.
 
+### XGBoost
+### XGBoost Classification
+
+#### Confusion Matrix
+![XGBoost Confusion Matrix](./xgboost/figures/xgboost_confusion_matrix.png)
+
+XGBoost confusion matrix showing true vs. predicted labels.
+
+#### Feature Importance
+![XGBoost Feature Importance](./xgboost/figures/xgboost_feature_importance.png)
+
+Ranking of features based on their F-score, showing the relative importance of variables in predicting outcomes.
+
+#### Learning Curve
+![XGBoost Learning Curve](./xgboost/figures/xgboost_learning_curve.png)
+
+Training and cross-validation accuracy vs. number of training samples.
+
+#### Precision-Recall Curve
+![XGBoost Precision-Recall Curve](./xgboost/figures/xgboost_precision_recall_curve.png)
+
+Precision-Recall curve showing the trade-off between precision and recall for different thresholds.
+
+#### ROC Curve
+![XGBoost ROC Curve](./xgboost/figures/xgboost_roc_curve.png)
+
+ROC curve and AUC showing the measure of XGBoost’s ability to distinguish benign vs. malignant tumors.
 
 ### Quantitative Metrics
 
